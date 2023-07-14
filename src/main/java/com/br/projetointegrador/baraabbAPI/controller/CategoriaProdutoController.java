@@ -20,7 +20,7 @@ import com.br.projetointegrador.baraabbAPI.service.GenericService;
 public class CategoriaProdutoController extends AbstractController<CategoriaProduto, CategoriaProdutoDTO> {
 	
 	@Autowired
-	private CategoriaProdutoService service;
+	private CategoriaProdutoService categoriaProdutoService;
 	
 	@Override
 	public Class<CategoriaProduto> getModelClass() {
@@ -34,7 +34,7 @@ public class CategoriaProdutoController extends AbstractController<CategoriaProd
 
 	@Override
 	public GenericService<CategoriaProduto> getService() {
-		return service;
+		return categoriaProdutoService;
 	}
 
 }
