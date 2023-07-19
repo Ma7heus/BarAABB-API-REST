@@ -39,6 +39,8 @@ public class Produto extends AbstractEntity {
 	
 	private Long quantidadeEstoque;
 	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "IDUSUARIO", foreignKey = @ForeignKey(name="FK_PRODUTO_CATEGORIAPROD"))
 	private Usuario usuarioCadastro;
 	
 	@Temporal(TemporalType.TIMESTAMP)

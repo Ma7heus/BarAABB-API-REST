@@ -2,16 +2,22 @@ package com.br.projetointegrador.baraabbAPI.DTO;
 
 import java.math.BigDecimal;
 
+import jakarta.validation.constraints.NotNull;
+
 public class VendaDiariaProdutoDTO extends AbstractDTO {
 
 	private Long idVendaDiariaProduto;
 	
+	@NotNull(message = "Produto é obrigatório")
 	private ProdutoDTO produto;
 	
+	@NotNull(message = "Venda diaria é obrigatória")
 	private VendaDiariaDTO vendaDiaria;
 	
+	@NotNull(message = "Total vendido é obrigatório")
 	private BigDecimal valorTotalVendido;
 	
+	@NotNull(message = "Quantidade vendida é obrigatória")
 	private Long quantidadeTotalVendida;
 	
 	@Override

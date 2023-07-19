@@ -5,14 +5,19 @@ import java.util.Date;
 
 import com.br.projetointegrador.baraabbAPI.model.Usuario;
 
+import jakarta.validation.constraints.NotNull;
+
 public class VendaDiariaDTO extends AbstractDTO {
 	
 	private Long idVendaDiaria;
 	
+	@NotNull(message = "Usuario é obrigatório")
 	private Usuario usuario;
 	
+	@NotNull(message = "Valor Total Bruto é obrigatório")
 	private BigDecimal valorTotalBruto;
 	
+	@NotNull(message = "Valor total liquido é obrigatório")
 	private BigDecimal valorTotalLiquido;
 		
 	private Date dataCadastro;

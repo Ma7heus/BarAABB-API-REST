@@ -1,9 +1,12 @@
 package com.br.projetointegrador.baraabbAPI.DTO;
 
+import jakarta.validation.constraints.NotNull;
+
 public class TipoUsuarioDTO extends AbstractDTO {
 	
 	private Long idTipoUsuario;
 	
+	@NotNull(message = "Descricao é obrigatória")
 	private String descricao;
 
 	@Override

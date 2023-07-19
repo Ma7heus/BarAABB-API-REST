@@ -1,9 +1,12 @@
 package com.br.projetointegrador.baraabbAPI.DTO;
 
+import jakarta.validation.constraints.NotNull;
+
 public class ListaCompraDTO extends AbstractDTO {
 	
 	private Long idListaCompra;
 	
+	@NotNull(message = "Usuario é obrigatório")
 	private UsuarioDTO usuario;
 	
 	public Long getId() {

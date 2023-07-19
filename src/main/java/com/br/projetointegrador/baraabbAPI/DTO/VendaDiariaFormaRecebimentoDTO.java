@@ -2,14 +2,19 @@ package com.br.projetointegrador.baraabbAPI.DTO;
 
 import java.math.BigDecimal;
 
+import jakarta.validation.constraints.NotNull;
+
 public class VendaDiariaFormaRecebimentoDTO extends AbstractDTO {
 
 	private Long idVendaDiariaFormaRecebimento;
 	
+	@NotNull(message = "Forma de pagamento é obrigatório")
 	private String formaPagamento;
 	
+	@NotNull(message = "Valor recebido é obrigatório")
 	private BigDecimal valorRecebido;
 	
+	@NotNull(message = "Venda diaria é obrigatório")
 	private VendaDiariaDTO vendaDiaria;
 	
 	@Override

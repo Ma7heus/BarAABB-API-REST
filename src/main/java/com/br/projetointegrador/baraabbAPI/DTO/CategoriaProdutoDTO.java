@@ -3,12 +3,16 @@ package com.br.projetointegrador.baraabbAPI.DTO;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import jakarta.validation.constraints.NotNull;
+
 public class CategoriaProdutoDTO extends AbstractDTO {
 	
 	private Long idCategoriaProduto;
 	
+	@NotNull(message = "Descricao é obrigatória")
 	private String descricao;
 	
+	@NotNull(message = "Percentual é obrigatório")
 	private BigDecimal percentualMargem;
 	
 	private Date dataCadastro;

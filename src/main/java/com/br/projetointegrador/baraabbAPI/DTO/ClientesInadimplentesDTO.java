@@ -3,14 +3,19 @@ package com.br.projetointegrador.baraabbAPI.DTO;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import jakarta.validation.constraints.NotNull;
+
 public class ClientesInadimplentesDTO extends AbstractDTO {
 
 	private Long idClientesInadimplentes;
 	
+	@NotNull(message = "Cliente é obrigatório")
 	private ClienteDTO cliente;
 	
+	@NotNull(message = "Valor Comanda é obrigatória")
 	private BigDecimal valorTotalComanda;
 	
+	@NotNull(message = "Status é obrigatório")
 	private String statusPagamanto;
 	
 	private Date dataCompra;
